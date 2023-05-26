@@ -8,13 +8,13 @@
 
 int _strlen(char *a)
 {
-        int b = 0;
+	int b = 0;
 
-        while (a[b] != 0)
-        {
-                b++;
-        }
-        return (b);
+	while (a[b] != 0)
+	{
+		b++;
+	}
+	return (b);
 }
 
 /**
@@ -26,16 +26,16 @@ int _strlen(char *a)
 
 char *_strcat(char *a, char *b)
 {
-        int c = _strlen(a);
-        int d = 0;
-
-        while (b[d] != '\0')
-        {
-                a[c + d] = b[d];
-                d++;
-        }
-        a[c + d] = '\0';
-        return (a);
+	int c = _strlen(a);
+	int d = 0;
+	
+	while (b[d] != '\0')
+	{
+		a[c + d] = b[d];
+		d++;
+	}
+	a[c + d] = '\0';
+	return (a);
 }
 
 /**
@@ -48,16 +48,16 @@ char *_strcat(char *a, char *b)
 
 char *_strncat(char *a, char *b, int c)
 {
-        int d = 0;
-        int e = _strlen(a);
+	int d = 0;
+	int e = _strlen(a);
 
-        while (d < c && b[d] != '\0')
-        {
-                a[e + d] = b[d];
-                d++;
-        }
-        a[e + d] = '\0';
-        return (a);
+	while (d < c && b[d] != '\0')
+	{
+		a[e + d] = b[d];
+		d++;
+	}
+	a[e + d] = '\0';
+	return (a);
 }
 
 /**
@@ -69,15 +69,15 @@ char *_strncat(char *a, char *b, int c)
 
 int _strcmp(char *a, char *b)
 {
-        int c = 0;
+	int c = 0;
 
-        while (a[c] != 0 || b[c] != 0)
-        {
-                if (a[c] != b[c])
-                return (a[c] - b[c]);
-                c++;
-        }
-        return (0);
+	while (a[c] != 0 || b[c] != 0)
+	{
+		if (a[c] != b[c])
+		return (a[c] - b[c]);
+		c++;
+	}
+	return (0);
 }
 
 /**
@@ -89,28 +89,28 @@ int _strcmp(char *a, char *b)
 
 char *_strtok(char *a, const char *b)
 {
-        static char *c;
-        char *d;
+	static char *c;
+	char *d;
 
-        if (a != NULL)
-        {
-                c = a;
-        }
-        else if (c == NULL)
-        {
-                return (NULL);
-        }
-        d = c;
-        while (*c != '\0')
-        {
-                if (*b == *c)
-                {
-                        *c = '\0';
-                        c++;
-                        return (d);
-                }
-                c++;
-        }
-        c = NULL;
-        return (d);
+	if (a != NULL)
+	{
+		c = a;
+	}
+	else if (c == NULL)
+	{
+		return (NULL);
+	}
+	d = c;
+	while (*c != '\0')
+	{
+		if (*b == *c)
+		{
+			*c = '\0';
+			c++;
+			return (d);
+		}
+		c++;
+	}
+	c = NULL;
+	return (d);
 }
