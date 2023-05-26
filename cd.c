@@ -47,24 +47,6 @@ int cd(bruh *ar)
 }
 
 /**
- * chng_pwd - change pwd
- * @ar: parameter of type bruh.
- */
-
-void chng_pwd(bruh *ar)
-{
-	char buff[250];
-	char *pwd = _malloc(ar, 256);
-
-	getcwd(buff, 250);
-	pwd[0] = '\0';
-	_strcat(pwd, "PWD=");
-	_strcat(pwd, buff);
-	free(*(ar->pwd));
-	*(ar->pwd) = pwd;
-}
-
-/**
  * g_PWD - get pwd from  env
  * @ar: parameter of type bruh
  * Return: NULL
@@ -85,6 +67,24 @@ char **g_PWD(bruh *ar)
 		}
 	}
 	return (NULL);
+}
+
+/**
+ * chng_pwd - change pwd
+ * @ar: parameter of type bruh.
+ */
+
+void chng_pwd(bruh *ar)
+{
+	char buff[250];
+	char *pwd = _malloc(ar, 256);
+
+	getcwd(buff, 250);
+	pwd[0] = '\0';
+	_strcat(pwd, "PWD=");
+	_strcat(pwd, buff);
+	free(*(ar->pwd));
+	*(ar->pwd) = pwd;
 }
 
 /**
@@ -110,5 +110,5 @@ void free_ex(bruh *ar)
 	{
 		free(ar->opwd);
 	}
-	exit(255);
+	exit(2);
 }
