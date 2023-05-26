@@ -161,9 +161,7 @@ int main(int arc, char **arv, char **evp)
 	if (ar.pwd)
 	ar.opwd = _strdup(&ar, &((*ar.pwd)[4]));
 	ar.shll_nm = arv[0];
-	ar.cnt = 0;
-	ar.sts = 0;
-	ar.fl = 0;
+	ar.cnt = 0, ar.sts = 0, ar.fl = 0;
 	ar.pid = (int)getpid();
 	ar.npth = tkn(ar.pth, ":");
 	if (arc > 1)
@@ -172,6 +170,7 @@ int main(int arc, char **arv, char **evp)
 		if (ar.fl == -1)
 		{
 			_printf("%s: 0: cannot open %s: no such file\n", arv[0], arv[1]);
+			free_ex(&ar);
 			exit(2);
 		}
 	}
