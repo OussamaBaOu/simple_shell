@@ -31,6 +31,26 @@ int _printf(const char *a, ...)
 }
 
 /**
+* tkn - return splitted number
+* @a: string
+* @b: delim
+* Return: c
+*/
+
+int tkn(char *a, char *b)
+{
+	int c = 0;
+	char *d = _strtok(a, b);
+
+	while (d)
+	{
+		d = _strtok(NULL, b);
+		c++;
+	}
+	return (c);
+}
+
+/**
  * hndl_point - handle point
  * @ln: input
  * @ar: parameter of type bruh
@@ -92,7 +112,7 @@ char *_malloc(bruh *ar, int a)
 	free_ex(ar);
 	return (buff);
 }
-
+ 
 /**
  * malloctoo - handle malloc too
  * @ln: input
@@ -111,24 +131,4 @@ char *malloctoo(char *ln, bruh *ar, int a)
 		free_ex(ar);
 	}
 	return (buff);
-}
-
-/**
-* tkn - return splitted number
-* @a: string
-* @b: delim
-* Return: c
-*/
-
-int tkn(char *a, char *b)
-{
-	int c = 0;
-	char *d = _strtok(a, b);
-
-	while (d)
-	{
-		d = _strtok(NULL, b);
-		c++;
-	}
-	return (c);
 }
