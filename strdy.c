@@ -28,7 +28,7 @@ char *_strcat(char *a, char *b)
 {
 	int c = _strlen(a);
 	int d = 0;
-	
+
 	while (b[d] != '\0')
 	{
 		a[c + d] = b[d];
