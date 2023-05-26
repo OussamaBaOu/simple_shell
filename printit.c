@@ -112,7 +112,7 @@ char *_malloc(bruh *ar, int a)
 	free_ex(ar);
 	return (buff);
 }
- 
+
 /**
  * malloctoo - handle malloc too
  * @ln: input
