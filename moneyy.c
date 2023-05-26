@@ -52,7 +52,7 @@ int hndl_input(bruh *ar)
 	char *a;
 	char *b;
 	char *c = _strchr(ar->ln, '#');
-	int buff_size = 200000;
+	int buff_size = 10340;
 
 	if (c && ((c != ar->ln && *(c - 1) == ' ') || c == ar->ln))
 	*c = '\0';
@@ -62,7 +62,7 @@ int hndl_input(bruh *ar)
 	buff[0] = '\0';
 	while (a)
 	{
-		buff = hndl_realloc(ar, buff, &buff_size, 3000, _strlen(buff) + a - b);
+		buff = hndl_realloc(ar, buff, &buff_size, 2900, _strlen(buff) + a - b);
 		_strncat(buff, b, a - b);
 		hndl_money(buff, &a, ar);
 		b = a;
@@ -174,7 +174,7 @@ ssize_t _getline(bruh *ar)
 	size_t a = 0;
 	ssize_t b;
 	char *buff;
-	int buff_size = 200000;
+	int buff_size = 10340;
 
 	if (&(ar->ln) == NULL)
 	return (-1);
@@ -187,7 +187,7 @@ ssize_t _getline(bruh *ar)
 	while ((b = read(ar->fl, buff + a, 1)) > 0)
 	{
 		a++;
-		buff = hndl_realloc(ar, buff, &buff_size, 3000, a);
+		buff = hndl_realloc(ar, buff, &buff_size, 2900, a);
 		if (buff[a - 1] == '\n' || buff[a - 1] == ';')
 		break;
 	}
