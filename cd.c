@@ -95,20 +95,12 @@ void chng_pwd(bruh *ar)
 void free_ex(bruh *ar)
 {
 	if (ar->ln)
-	{
 	free(ar->ln);
-	}
 	if (ar->pth)
-	{
-		free(ar->pth);
-	}
+	free(ar->pth);
 	if (ar->pwd)
-	{
-		free(*(ar->pwd));
-	}
+	free(*(ar->pwd));
 	if (ar->opwd)
-	{
-		free(ar->opwd);
-	}
+	free(ar->opwd);
 	exit(2);
 }
