@@ -62,7 +62,7 @@ int hndl_input(bruh *ar)
 	buff[0] = '\0';
 	while (a)
 	{
-		buff = hndl_realloc(ar, buff, &buff_size, 1024, _strlen(buff) + a - b);
+		buff = hndl_realloc(ar, buff, &buff_size, 2048, _strlen(buff) + a - b);
 		_strncat(buff, b, a - b);
 		hndl_money(buff, &a, ar);
 		b = a;
