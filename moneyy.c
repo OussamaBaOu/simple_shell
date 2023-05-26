@@ -52,7 +52,7 @@ int hndl_input(bruh *ar)
 	char *a;
 	char *b;
 	char *c = _strchr(ar->ln, '#');
-	int buff_size = 6920;
+	int buff_size = 200000;
 
 	if (c && ((c != ar->ln && *(c - 1) == ' ') || c == ar->ln))
 	*c = '\0';
