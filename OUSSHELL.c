@@ -187,5 +187,7 @@ int main(int arc, char **arv, char **evp)
 		if (_cmnd_(&ar) == 255)
 		free_ex(&ar);
 	}
+	if (arc > 1)
+		close(ar.fl);
 	return (0);
 }
