@@ -1,6 +1,6 @@
 #ifndef _OUSSAMA_H_
 #define _OUSSAMA_H_
-
+#define BUFF_SIZE 200000
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
