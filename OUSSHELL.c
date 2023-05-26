@@ -30,6 +30,7 @@ int _cmnd_(bruh *ar)
 		for (i = 0; i < ar->npth; i++)
 		{
 			char buffer[500] = "";
+
 			_strcat(buffer, pth);
 			_strcat(buffer, "/");
 			_strcat(buffer, ar->ln);
@@ -121,8 +122,8 @@ int _exit_(bruh *ar)
 		ar->shll_nm, ar->cnt, ar->ln + a);
 		ar->sts = 2;
 		return (1);
-        }
-        return (0);
+	}
+	return (0);
 }
 
 /**
