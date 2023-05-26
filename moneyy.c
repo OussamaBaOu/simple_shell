@@ -187,7 +187,7 @@ ssize_t _getline(bruh *ar)
 	while ((b = read(ar->fl, buff + a, 1)) > 0)
 	{
 		a++;
-		buff = hndl_realloc(ar, buff, &buff_size, 1048, a);
+		buff = hndl_realloc(ar, buff, &buff_size, 2048, a);
 		if (buff[a - 1] == '\n' || buff[a - 1] == ';')
 		break;
 	}
