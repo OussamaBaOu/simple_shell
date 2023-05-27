@@ -152,9 +152,8 @@ int main(int arc, char **arv, char **evp)
 	bruh ar;
 	int a = 1, b = 0;
 
-	ar.ln = NULL, ar.pth = NULL;
-	ar.evp = evp;
-	ar.pwd = NULL;
+	ar.pwd = NULL, ar.pth = NULL;
+	ar.evp = evp, ar.ln = NULL;
 	ar.opwd = NULL;
 	ar.pth = _strdup(&ar, g_env(evp, "PATH", 4));
 	ar.pwd = g_PWD(&ar);
