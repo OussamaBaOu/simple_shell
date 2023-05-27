@@ -52,7 +52,7 @@ int hndl_input(bruh *ar)
 	char *a;
 	char *b;
 	char *c = _strchr(ar->ln, '#');
-	int buff_size = 1024;
+	int buff_size = 10000;
 
 	if (c && ((c != ar->ln && *(c - 1) == ' ') || c == ar->ln))
 	*c = '\0';
@@ -174,7 +174,7 @@ ssize_t _getline(bruh *ar)
 	size_t a = 0;
 	ssize_t b;
 	char *buff;
-	int buff_size = 1024;
+	int buff_size = 10000;
 
 	if (&(ar->ln) == NULL)
 	return (-1);
